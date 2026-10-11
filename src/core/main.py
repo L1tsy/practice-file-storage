@@ -1,8 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-import routers_file
-import routers_user
+from src.routers import routers_file, routers_user
 
 app = FastAPI(
     title="File Storage Backend",

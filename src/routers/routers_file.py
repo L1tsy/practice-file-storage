@@ -3,10 +3,10 @@ from uuid import UUID
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
-from auth import get_current_user
-from database import get_db
-import models
-from schemas import FileCreate, FileOut, FolderCreate, FolderOut
+from src.core.auth import get_current_user
+from database.database import get_db
+from src import models
+from src.schemas import FileCreate, FileOut, FolderCreate, FolderOut
 
 router = APIRouter(prefix="/api/v1", tags=["Folders & Files"])
 
